@@ -1,0 +1,1 @@
+Place your hero walkthrough MP4 video here as 'hero.mp4' (H.264).

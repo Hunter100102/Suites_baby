@@ -1,0 +1,20 @@
+# Prevent anyone from downloading or viewing .env or similar config files
+<FilesMatch "^\.env">
+    Require all denied
+</FilesMatch>
+
+# Optional: also block other hidden/system files
+<FilesMatch "(\.ini|\.log|composer\.json|composer\.lock|\.git)">
+    Require all denied
+</FilesMatch>
+
+
+# Serve PHP and route pretty URLs if needed
+Options +FollowSymLinks
+RewriteEngine On
+
+# Force HTTPS (optional, uncomment once HTTPS is set)
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+AddType video/mp4 .mp4
